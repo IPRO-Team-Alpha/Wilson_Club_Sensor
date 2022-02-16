@@ -40,7 +40,6 @@ void setup() {
       /*
       init bluetooth serial device
       */
-  
   if (!bleSerial.beginAndSetupBLE("Instrumented Smart Club")) { //Start BLE
     while (true) {
       Serial.println("failed to initialize HardwareBLESerial!");
@@ -50,7 +49,6 @@ void setup() {
       /*
       init adafruit BNO055 orientation senesor
       */   
-
   if (!bno.begin())
   {
     /* There was a problem detecting the BNO055 ... check your connections */
@@ -59,15 +57,7 @@ void setup() {
   }
 
   delay(1000);
-  
-  //while (!Serial);
-  /*while (!bleSerial){
-    delay(10);
-    }*/
-
 }
-
-
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -125,8 +115,7 @@ void loop() {
       bleSerial.print("SPEED:  ");
       bleSerial.println(velo);
       bleSerial.flush();
-
-
+      
       hit = 0;
       fitting_mode = 0;
       }
