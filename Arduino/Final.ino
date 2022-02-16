@@ -36,13 +36,20 @@ double DEG_2_RAD = 0.01745329251; //trig functions require radians, BNO055 outpu
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-
+  
+      /*
+      init bluetooth serial device
+      */
+  
   if (!bleSerial.beginAndSetupBLE("Instrumented Smart Club")) { //Start BLE
     while (true) {
       Serial.println("failed to initialize HardwareBLESerial!");
       delay(1000);
     }
   }
+      /*
+      init adafruit BNO055 orientation senesor
+      */   
 
   if (!bno.begin())
   {
