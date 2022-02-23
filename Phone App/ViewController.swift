@@ -48,7 +48,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     @objc func cancelScan() {
         self.centralManager?.stopScan()
         print("Scan Stopped")
-        print("Number of Peripherals Found: \peripherals.count)")
+        print("Number of Peripherals Found: peripherals.count)")
     }
 
     @IBAction func ClickedButton(_ sender: Any) {
